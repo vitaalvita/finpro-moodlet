@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Moodlet — Panduan &amp; Tips</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo" href="index.html" aria-label="Moodlet"
+        >Mood<span>let</span><i class="dot"></i
+      ></a>
+      <button
+        class="hamburger"
+        id="hamburger"
+        aria-label="Buka menu"
+        aria-expanded="false"
+        aria-controls="mainNav"
+      >
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="main-nav" id="mainNav" aria-label="Navigasi utama">
+        <a class="pill" href="index.html">Kalender Mood</a>
+        <a class="pill active" href="about.html" aria-current="page"
+          >Panduan &amp; Tips</a
+        >
+      </nav>
+    </header>
+
+    <main class="about">
+      <section class="about-intro">
+        <h1>Tentang Moodlet</h1>
+        <p>
+          Moodlet adalah jurnal mood harian yang ringan. Pilih ekspresi yang
+          paling cocok dengan harimu, tulis cerita singkat, lalu tempelkan ke
+          kalender. Lama-lama kamu bisa melihat pola perasaanmu dari bulan ke
+          bulan. Semua catatan disimpan di browser kamu, tanpa akun dan tanpa
+          server.
+        </p>
+      </section>
+
+      <section class="notes-grid" aria-label="Kategori mood">
+        <article class="sticky about-note" style="--note: #f8d86b">
+          <div class="tape"></div>
+          <div class="about-face" data-face="senang"></div>
+          <h2>Mood Senang</h2>
+          <p>
+            Hari yang terasa ringan: kabar baik, tawa bersama teman, atau target
+            kecil yang tercapai. Catat apa penyebabnya supaya bisa kamu ulangi.
+          </p>
+          <span class="tag">Tips: tulis satu hal yang disyukuri</span>
+        </article>
+
+        <article class="sticky about-note" style="--note: #a3cbb3">
+          <div class="tape"></div>
+          <div class="about-face" data-face="tenang"></div>
+          <h2>Mood Tenang</h2>
+          <p>
+            Pikiran terasa lapang dan napas teratur. Biasanya datang setelah
+            istirahat cukup, jalan santai, atau waktu sendiri yang berkualitas.
+          </p>
+          <span class="tag">Tips: catat aktivitas yang menenangkan</span>
+        </article>
+
+        <article class="sticky about-note" style="--note: #dfd7cb">
+          <div class="tape"></div>
+          <div class="about-face" data-face="biasa"></div>
+          <h2>Mood Biasa Saja</h2>
+          <p>
+            Tidak terlalu senang, tidak juga sedih. Hari yang berjalan datar
+            tetap layak dicatat, karena dari rutinitas kecil sering muncul pola
+            yang baru terlihat nanti.
+          </p>
+          <span class="tag">Tips: catat satu hal kecil yang kamu sadari</span>
+        </article>
+
+        <article class="sticky about-note" style="--note: #a7d0f5">
+          <div class="tape"></div>
+          <div class="about-face" data-face="sedih"></div>
+          <h2>Mood Sedih</h2>
+          <p>
+            Wajar merasa sedih. Menuliskannya membantu perasaan keluar dari
+            kepala. Beri dirimu waktu, dan hubungi orang tepercaya bila terasa
+            berat.
+          </p>
+          <span class="tag">Tips: tulis apa yang kamu butuhkan hari ini</span>
+        </article>
+
+        <article class="sticky about-note" style="--note: #f6b3b3">
+          <div class="tape"></div>
+          <div class="about-face" data-face="kesal"></div>
+          <h2>Mood Kesal</h2>
+          <p>
+            Ada yang mengganjal atau tidak berjalan sesuai rencana. Tulis dulu
+            tanpa disaring, lalu tarik napas dalam sebelum menanggapi.
+          </p>
+          <span class="tag">Tips: pisahkan fakta dari asumsi</span>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 Moodlet.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

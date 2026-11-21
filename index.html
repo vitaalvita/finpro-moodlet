@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Moodlet — Kalender Mood</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo" href="index.html" aria-label="Moodlet"
+        >Mood<span>let</span><i class="dot"></i
+      ></a>
+      <button
+        class="hamburger"
+        id="hamburger"
+        aria-label="Buka menu"
+        aria-expanded="false"
+        aria-controls="mainNav"
+      >
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="main-nav" id="mainNav" aria-label="Navigasi utama">
+        <a class="pill active" href="index.html" aria-current="page"
+          >Kalender Mood</a
+        >
+        <a class="pill" href="about.html">Panduan &amp; Tips</a>
+      </nav>
+    </header>
+
+    <main class="split">
+      <section class="picker" aria-labelledby="pickerTitle">
+        <h1 id="pickerTitle">How are u feeling today?</h1>
+        <p class="sub">
+          Geser atau tekan panah untuk memilih ekspresi, lalu klik wajahnya
+          untuk menulis cerita hari ini.
+        </p>
+
+        <div class="carousel" id="carousel">
+          <button class="arrow" id="prevMood" aria-label="Mood sebelumnya">
+            &lsaquo;
+          </button>
+          <button
+            class="face-circle"
+            id="faceCircle"
+            aria-label="Pilih mood ini dan tulis catatan"
+          ></button>
+          <button class="arrow" id="nextMood" aria-label="Mood berikutnya">
+            &rsaquo;
+          </button>
+        </div>
+        <p class="mood-label" id="moodLabel" aria-live="polite"></p>
+        <p class="mood-hint">Klik wajah untuk menulis cerita</p>
+        <div
+          class="dots"
+          id="dots"
+          role="tablist"
+          aria-label="Pilihan mood"
+        ></div>
+
+        <article class="sticky" id="stickyNote" hidden>
+          <div class="tape"></div>
+          <button class="close" id="closeNote" aria-label="Tutup catatan">
+            &times;
+          </button>
+          <p class="sticky-date" id="noteDate"></p>
+          <label class="sr-only" for="noteText">Cerita hari ini</label>
+          <textarea
+            id="noteText"
+            rows="5"
+            maxlength="400"
+            placeholder="Ceritakan harimu di sini..."
+          ></textarea>
+          <button class="btn" id="saveNote">Tempel ke Kalender</button>
+        </article>
+      </section>
+
+      <section class="calendar-card" aria-labelledby="monthTitle">
+        <div class="cal-head">
+          <div class="cal-nav">
+            <button
+              class="arrow small"
+              id="prevMonth"
+              aria-label="Bulan sebelumnya"
+            >
+              &lsaquo;
+            </button>
+            <h2 id="monthTitle"></h2>
+            <button
+              class="arrow small"
+              id="nextMonth"
+              aria-label="Bulan berikutnya"
+            >
+              &rsaquo;
+            </button>
+          </div>
+          <span class="year-badge" id="yearBadge"></span>
+        </div>
+        <div class="weekdays" aria-hidden="true">
+          <span>M</span><span>S</span><span>S</span><span>R</span><span>K</span
+          ><span>J</span><span>S</span>
+        </div>
+        <div class="grid" id="calendarGrid"></div>
+        <p class="cal-hint">
+          Klik lingkaran tanggal yang terisi untuk membaca sticky note-mu.
+        </p>
+      </section>
+    </main>
+
+    <div class="modal" id="modal" hidden>
+      <div class="modal-backdrop" id="modalBackdrop"></div>
+      <article
+        class="sticky modal-note"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modalDate"
+        id="modalNote"
+      >
+        <div class="tape"></div>
+        <button class="close" id="modalClose" aria-label="Tutup">
+          &times;
+        </button>
+        <div class="modal-face" id="modalFace"></div>
+        <p class="sticky-date" id="modalDate"></p>
+        <p class="modal-mood" id="modalMood"></p>
+        <p class="modal-text" id="modalText"></p>
+        <div class="modal-actions">
+          <button class="btn" id="modalEdit">Ubah</button>
+          <button class="btn ghost" id="modalDelete">Hapus</button>
+        </div>
+      </article>
+    </div>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 Moodlet.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
